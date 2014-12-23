@@ -4,7 +4,7 @@ import flask.views
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
+def server():
 	return "Hello Abraham and Baris.!"
 
 
