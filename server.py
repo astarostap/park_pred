@@ -3,14 +3,10 @@ import flask.views
 
 app = Flask(__name__)
 
-class View(flask.views.MethodView):
-	def get(self):
-		return "Hello World!"
-
-app.add_url_rule('/', view_func=View.as_view('main'))
-
-app.debug = True
+@app.route("/")
+def hello():
+return "Hello Abraham and Baris.!"
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=80, debug=True)
